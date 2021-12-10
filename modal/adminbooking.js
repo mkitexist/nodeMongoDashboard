@@ -1,0 +1,111 @@
+const mongoose=require("mongoose");
+
+const bookingSchema= new mongoose.Schema({
+date:{
+    type:Date,
+    required:true
+},
+attendees:{
+    type:Number,
+    required:true
+},
+room:{
+    type:String,
+    required:true
+},
+layout:{
+    type:String,
+    required:true
+},
+duration:{
+    type:String,
+    required:true
+},
+status:{
+    type:String,
+    required:true
+},
+paymentMethod:{
+    type:String,
+    required:true
+},
+roomPrice:{
+    type:String,
+    required:true
+},
+equipmentPrice:{
+    type:String,
+    required:true
+},
+foodDrinkPrice:{
+    type:String,
+    required:true
+},
+subtotal:{
+    type:String,
+    required:true
+},
+tax:{
+    type:String,
+    required:true
+},
+total:{
+    type:String,
+    required:true
+},
+deposite:{
+    type:Number,
+    required:true
+},
+title:{
+    type:String,
+    required:true
+},
+name:{
+    type:String,
+    required:true
+},
+email:{
+    type:String,
+    required:true
+},
+phone:{
+    type:Number,
+    required:true
+},
+notes:{
+    type:String,
+    required:true
+},
+company:{
+    type:String,
+    required:true
+},
+address:{
+    type:String,
+    required:true
+},
+city:{
+    type:String,
+    required:true
+},
+state:{
+    type:String,
+    required:true
+},
+zip:{
+    type:Number,
+    required:true
+},
+country:{
+    type:String,
+    required:true
+},
+
+// creator:{
+//     type:mongoose.Schema.Types.ObjectId, ref:"User",required:true
+// }
+
+});
+
+module.exports=mongoose.model('AddBooking',bookingSchema);

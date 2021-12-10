@@ -1,0 +1,11 @@
+const express=require("express");
+const router=express.Router();
+const bookingControler=require("../controller/bookingController")
+router.post('/',bookingControler.createBooking);
+router.get('/',bookingControler.getBooking);
+// router.get('/');
+router.delete('/:id',bookingControler.deleteBooking);
+router.put("/:id",bookingControler.editBooking)
+// router.get("/:id")
+
+module.exports=router;
